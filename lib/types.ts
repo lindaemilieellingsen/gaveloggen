@@ -1,29 +1,3 @@
-export type Category = "work" | "personal" | "shopping"
-export type Priority = "high" | "medium" | "low"
-
-export interface Task {
-  id: string
-  user_id: string
-  title: string
-  description: string | null
-  category: Category
-  priority: Priority
-  completed: boolean
-  due_date: string | null
-  reminder: string | null
-  created_at: string
-  updated_at: string
-}
-
-export interface TaskFormData {
-  title: string
-  description?: string
-  category: Category
-  priority: Priority
-  due_date?: string
-  reminder?: string
-}
-
 export interface Person {
   id: string
   user_id: string

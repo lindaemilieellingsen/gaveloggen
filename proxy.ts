@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server"
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     const sessionCookie = request.cookies.get("gaveloggen-session")
     if (!sessionCookie?.value) {
